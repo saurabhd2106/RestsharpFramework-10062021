@@ -1,5 +1,6 @@
 ﻿using BestBuyApplication.Model.Product;
 using BestBuyApplicationTest.Request.Product;
+using BestBuyApplicationTest.Utils;
 using CommonLibs.Client;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
@@ -11,28 +12,10 @@ using System.Text;
 namespace BestBuyApplicationTest.Tests.ProductAPITest
 {
     [TestClass]
-    public class ProductAPITest
+    public class ProductAPITest : BaseTest
     {
 
-        private string baseUrl = "http://ec2-18-223-213-189.us-east-2.compute.amazonaws.com";
-
-        private int portNumber = 3030;
-
-        private string productEndpointUrl = "/products";
-
-        private string endpointUrl;
-
-        RequestFactory productRequestFactory;
-
-        [TestInitialize]
-        public void Setup()
-        {
-            endpointUrl = $"{baseUrl}:{portNumber}{productEndpointUrl}";
-
-            productRequestFactory = new RequestFactory(endpointUrl);
-
-
-        }
+        
 
         [TestMethod]
         public void VerifyGetProductApi()
@@ -43,9 +26,7 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
 
             Console.WriteLine(restResponse.Content);
 
-            Assert.AreEqual(HttpStatusCode.OK, restResponse.StatusCode);
-
-            Assert.AreEqual(200, (int)restResponse.StatusCode);
+            AssertStatusCode.VerifySuccessCode(restResponse);
 
             Assert.AreEqual(10, restResponse.Data.limit);
 
@@ -60,7 +41,7 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
 
             Console.WriteLine(restResponse.Content);
 
-            Assert.AreEqual(HttpStatusCode.OK, restResponse.StatusCode);
+            AssertStatusCode.VerifySuccessCode(restResponse);
 
             Assert.AreEqual(limit, restResponse.Data.limit);
 
@@ -80,7 +61,7 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
 
 
 
-            Assert.AreEqual(HttpStatusCode.Created, restResponse.StatusCode);
+            AssertStatusCode.VerifyCreateCode(restResponse);
 
             Assert.AreEqual("IPhone", restResponse.Data.name);
 
@@ -131,7 +112,7 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
 
             IRestResponse<DataDto> restResponse = productRequestFactory.AddProduct<DataDto>(requestPayload);
 
-            Assert.AreEqual(HttpStatusCode.Created, restResponse.StatusCode);
+            AssertStatusCode.VerifyCreateCode(restResponse);
 
             Console.WriteLine(restResponse.Data.id);
 
