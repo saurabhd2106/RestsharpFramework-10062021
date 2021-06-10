@@ -1,0 +1,9 @@
+C:\Users\Admin\source\repos\BestBuyApplication10062021\CommonLibs\bin\Debug\netcoreapp3.1\CommonLibs.deps.json
+C:\Users\Admin\source\repos\BestBuyApplication10062021\CommonLibs\bin\Debug\netcoreapp3.1\CommonLibs.dll
+C:\Users\Admin\source\repos\BestBuyApplication10062021\CommonLibs\obj\Debug\netcoreapp3.1\CommonLibs.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\BestBuyApplication10062021\CommonLibs\obj\Debug\netcoreapp3.1\CommonLibs.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\BestBuyApplication10062021\CommonLibs\obj\Debug\netcoreapp3.1\CommonLibs.AssemblyInfo.cs
+C:\Users\Admin\source\repos\BestBuyApplication10062021\CommonLibs\bin\Debug\netcoreapp3.1\CommonLibs.pdb
+C:\Users\Admin\source\repos\BestBuyApplication10062021\CommonLibs\obj\Debug\netcoreapp3.1\CommonLibs.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BestBuyApplication10062021\CommonLibs\obj\Debug\netcoreapp3.1\CommonLibs.dll
+C:\Users\Admin\source\repos\BestBuyApplication10062021\CommonLibs\obj\Debug\netcoreapp3.1\CommonLibs.pdb

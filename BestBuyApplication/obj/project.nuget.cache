@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "OALDxNjZTOl6QGDct4/lMLudWOQ6py2jJnwbQWsjQM8VHUo7iFY2bTtnsnCT5Cl9kIkhQNRcuG0I+3fmsiS5pg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\BestBuyApplication10062021\\BestBuyApplication\\BestBuyApplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512"
+  ],
+  "logs": []
+}

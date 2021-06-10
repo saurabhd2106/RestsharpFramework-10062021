@@ -1,0 +1,17 @@
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\bin\Debug\netcoreapp3.1\BestBuyApplication.exe
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\obj\Debug\netcoreapp3.1\BestBuyApplication.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\obj\Debug\netcoreapp3.1\BestBuyApplication.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\obj\Debug\netcoreapp3.1\BestBuyApplication.AssemblyInfo.cs
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\bin\Debug\netcoreapp3.1\BestBuyApplication.deps.json
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\bin\Debug\netcoreapp3.1\BestBuyApplication.runtimeconfig.json
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\bin\Debug\netcoreapp3.1\BestBuyApplication.runtimeconfig.dev.json
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\bin\Debug\netcoreapp3.1\BestBuyApplication.dll
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\bin\Debug\netcoreapp3.1\BestBuyApplication.pdb
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\obj\Debug\netcoreapp3.1\BestBuyApplication.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\obj\Debug\netcoreapp3.1\BestBuyApplication.csproj.CopyComplete
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\obj\Debug\netcoreapp3.1\BestBuyApplication.dll
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\obj\Debug\netcoreapp3.1\BestBuyApplication.pdb
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\obj\Debug\netcoreapp3.1\BestBuyApplication.genruntimeconfig.cache
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\bin\Debug\netcoreapp3.1\CommonLibs.dll
+C:\Users\Admin\source\repos\BestBuyApplication10062021\BestBuyApplication\bin\Debug\netcoreapp3.1\CommonLibs.pdb
