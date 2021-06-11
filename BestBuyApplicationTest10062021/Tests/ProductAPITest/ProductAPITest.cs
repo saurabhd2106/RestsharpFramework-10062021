@@ -1,4 +1,5 @@
-﻿using BestBuyApplication.Model.Product;
+﻿using AventStack.ExtentReports;
+using BestBuyApplication.Model.Product;
 using BestBuyApplicationTest.Request.Product;
 using BestBuyApplicationTest.Utils;
 using CommonLibs.Client;
@@ -21,12 +22,15 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
         public void VerifyGetProductApi()
         {
 
+            Reporter.CreateATestCase("Verify Get Product API", "This Test verifies the Get product API");
 
             IRestResponse<ProductDto> restResponse = productRequestFactory.GetAllProduct<ProductDto>();
 
             Console.WriteLine(restResponse.Content);
 
             AssertStatusCode.VerifySuccessCode(restResponse);
+
+            Reporter.AddLogs(Status.Info, restResponse.Content);
 
             Assert.AreEqual(10, restResponse.Data.limit);
 
@@ -35,6 +39,9 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
         [TestMethod]
         public void VerifyGetProductApiWithQueryParam()
         {
+
+            Reporter.CreateATestCase("Verify Get Product API with Query Param", "This Test verifies the Get product API");
+
             int limit = 5;
 
             IRestResponse<ProductDto> restResponse = productRequestFactory.GetAllProduct<ProductDto>(limit, 0);
@@ -45,6 +52,7 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
 
             Assert.AreEqual(limit, restResponse.Data.limit);
 
+            Reporter.AddLogs(Status.Info, restResponse.Content);
 
         }
 
@@ -52,6 +60,7 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
         public void VerifyPostProduct()
         {
 
+            Reporter.CreateATestCase("Verify Post Product API", "This Test verifies the Post product API");
 
 
             string requestPayload = "{\r\n    \"name\": \"IPhone\",\r\n    \"type\": \"Mobile\",\r\n    \"price\": 1000,\r\n    \"shipping\": 10,\r\n    \"upc\": \"dsfhj3424\",\r\n    \"description\": \"Best Mobile in the town\",\r\n    \"manufacturer\": \"Apple\",\r\n    \"model\": \"IPhone 12\",\r\n    \"url\": \"string\",\r\n    \"image\": \"string\"\r\n}";
@@ -67,11 +76,15 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
 
             Console.WriteLine(restResponse.Data.id);
 
+            Reporter.AddLogs(Status.Info, restResponse.Content);
+
         }
 
         [TestMethod]
         public void VerifyPostProductRequestWithInsufficientData()
         {
+            Reporter.CreateATestCase("Verify Post Product API", "This Test verifies the Get product API");
+
 
 
             Dictionary<string, object> requestpayload = new Dictionary<string, object>();
@@ -96,6 +109,8 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
 
 
 
+            Reporter.CreateATestCase("Verify Post Product API with Request Payload", "This Test verifies the Post product API");
+
 
             ProductRequestDto requestPayload = new ProductRequestDto();
 
@@ -105,11 +120,11 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
             requestPayload.shipping = 10;
             requestPayload.upc = "asd@udfg";
             requestPayload.description = "Best Mobile";
-            requestPayload.manufacturer = "Samsung";
+         /*   requestPayload.manufacturer = "Samsung";
             requestPayload.model = "M21";
             requestPayload.url = "asfhgsdjh";
             requestPayload.image = "asfskd";
-
+    */
             IRestResponse<DataDto> restResponse = productRequestFactory.AddProduct<DataDto>(requestPayload);
 
             AssertStatusCode.VerifyCreateCode(restResponse);
