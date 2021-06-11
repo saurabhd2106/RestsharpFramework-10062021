@@ -73,6 +73,10 @@
               "target": "Package",
               "version": "[106.11.7, )"
             },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            },
             "coverlet.collector": {
               "target": "Package",
               "version": "[1.2.0, )"
@@ -200,6 +204,10 @@
             "RestSharp": {
               "target": "Package",
               "version": "[106.11.7, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
             }
           },
           "imports": [

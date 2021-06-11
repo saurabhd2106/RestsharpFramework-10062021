@@ -14,7 +14,7 @@ namespace BestBuyApplicationTest.Tests
     [TestClass]
     public class BaseTest
     {
-
+        internal DbUtils db;
 
         private string baseUrl;
 
@@ -58,11 +58,13 @@ namespace BestBuyApplicationTest.Tests
             settingUpEndointpointUrl();
 
             initializeRequestFactory();
+
+            openDatabaseConnection();
             
 
         }
 
-       
+        
 
         [TestCleanup]
         public void PostTextExecution()
@@ -76,12 +78,18 @@ namespace BestBuyApplicationTest.Tests
             {
                 Reporter.AddLogs(Status.Skip, "One or more steps are not runnable");
             }
+
+            closeDatabaseConnection();
         }
+
+        
 
         [AssemblyCleanup]
         public static void PostCleanup()
         {
             endReporter();
+
+            
 
             
         }
@@ -138,6 +146,23 @@ namespace BestBuyApplicationTest.Tests
             endpointUrl = $"{baseUrl}:{portNumber}{Routes.PRODUCT}";
 
             Reporter.AddLogs(Status.Info, "Endpoint URL " + endpointUrl);
+        }
+
+        private void openDatabaseConnection()
+        {
+            db = new DbUtils();
+
+            string userId = Configuration["database:userId"];
+            string password = Configuration["database:password"];
+            string hostname = Configuration["database:hostname"];
+            string dbName = Configuration["database:dbName"];
+
+            db.CreateConnection(hostname, userId, password, dbName);
+        }
+
+        private void closeDatabaseConnection()
+        {
+            db.CloseConnection();
         }
     }
 }

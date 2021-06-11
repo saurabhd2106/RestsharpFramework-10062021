@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Net;
 using System.Text;
 
@@ -16,6 +17,36 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
     public class ProductAPITest : BaseTest
     {
 
+        [TestMethod]
+        public void ExecuteDatabaseQuery()
+        {
+            string query = "select * from OrdersTestData";
+
+            DataTable response = db.ExecuteSelectQuery(query);
+
+            foreach(DataRow row in response.Rows)
+            {
+                Console.WriteLine($" Poduct Name - {row["productName"]}," +
+                    $"Quantity - {row["quantity"]}");
+            }
+        }
+
+        [TestMethod]
+        public void ExecuteNonSelectQuery()
+        {
+            StringBuilder builder = new StringBuilder();
+
+            builder.Append("Insert into ");
+            builder.Append("OrdersTestData (productName, quantity,price, orderDate, customerName, streetNumber, city, state, zipCode, cardNumber, cardType, expirationDate) ");
+            builder.Append("Values ");
+            builder.Append("('ScreenSaver', 5, 100, '06/04/2020', 'Saurabh Dhingra', 12, 'Gurgaon', 'Haryana', '122001', '324523452364', 'Visa', '06/06/2020')");
+
+            string sqlQuery = builder.ToString();
+
+            int rowsAffected = db.ExecuteNonSelectQuery(sqlQuery);
+
+            Assert.AreEqual(1, rowsAffected);
+        }
         
 
         [TestMethod]
