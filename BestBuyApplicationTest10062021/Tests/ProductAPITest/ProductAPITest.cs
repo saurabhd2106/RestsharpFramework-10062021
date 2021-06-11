@@ -120,11 +120,11 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
             requestPayload.shipping = 10;
             requestPayload.upc = "asd@udfg";
             requestPayload.description = "Best Mobile";
-         /*   requestPayload.manufacturer = "Samsung";
+          requestPayload.manufacturer = "Samsung";
             requestPayload.model = "M21";
             requestPayload.url = "asfhgsdjh";
             requestPayload.image = "asfskd";
-    */
+   
             IRestResponse<DataDto> restResponse = productRequestFactory.AddProduct<DataDto>(requestPayload);
 
             AssertStatusCode.VerifyCreateCode(restResponse);
