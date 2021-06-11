@@ -120,11 +120,9 @@ namespace BestBuyApplicationTest.Tests.ProductAPITest
             requestPayload.shipping = 10;
             requestPayload.upc = "asd@udfg";
             requestPayload.description = "Best Mobile";
-<<<<<<< HEAD
+
             requestPayload.manufacturer = "Samsung";
-=======
           requestPayload.manufacturer = "Samsung";
->>>>>>> 6d8a45e28ae4509df67d290aa01981e6ac2a6406
             requestPayload.model = "M21";
             requestPayload.url = "asfhgsdjh";
             requestPayload.image = "asfskd";
